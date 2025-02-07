@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈志强 - 高级测试开发工程师</title>
+    <!-- 引入Ant Design CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/antd@4.24.13/dist/antd.min.css">
+    <style>
+        :root {
+            --primary-color: #1890ff;
+            --gradient-bg: linear-gradient(135deg, #f0f5ff 0%, #f6faff 100%);
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            background: var(--gradient-bg);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .resume-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .ant-card {
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .ant-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+        }
+
+        .header-card {
+            background: linear-gradient(135deg, #1890ff 0%, #0050b3 100%);
+            color: white !important;
+            text-align: center;
+        }
+
+        .skill-tag {
+            margin: 4px;
+            border-radius: 20px;
+            background: #e6f7ff;
+            border-color: #91d5ff;
+        }
+
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            .resume-container {
+                padding: 1rem;
+            }
+        }
+
+        /* 为项目经历卡片添加间隙 */
+        .ant-row.gutter-16 .ant-col {
+            padding: 8px;
+        }
+
+        /* 为项目经历卡片添加边框和样式 */
+        .ant-row.gutter-16 .ant-col .ant-card {
+            border: 1px solid #e8e8e8;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        /* 鼠标悬停效果 */
+        .ant-row.gutter-16 .ant-col .ant-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-container">
+        <!-- 头部信息 -->
+        <div class="ant-card header-card">
+            <div class="ant-card-body">
+                <h1 style="font-size: 2.5em; margin-bottom: 0">陈志强</h1>
+                <p style="font-size: 1.2em">高级测试开发工程师</p>
+                <div style="margin-top: 1rem">
+                    <span class="ant-tag" style="background: rgba(255,255,255,0.2)">📱 18281041357</span>
+                    <span class="ant-tag" style="background: rgba(255,255,255,0.2)">📧 757701759@qq.com</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 求职意向 -->
+        <div class="ant-card">
+            <div class="ant-card-body">
+                <h2 class="ant-typography" style="color: var(--primary-color)">🎯 求职意向</h2>
+                <div class="ant-row">
+                    <div class="ant-col ant-col-12">
+                        <p><strong>期望职位：</strong>高级测试开发工程师</p>
+                    </div>
+                    <div class="ant-col ant-col-12">
+                        <p><strong>到岗状态：</strong>随时入职</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 专业技能 -->
+        <div class="ant-card">
+            <div class="ant-card-body">
+                <h2 class="ant-typography" style="color: var(--primary-color)">🚀 技术栈</h2>
+                <div class="ant-row">
+                    <div class="ant-col ant-col-24">
+                        <span class="skill-tag ant-tag">Linux系统管理</span>
+                        <span class="skill-tag ant-tag">Python自动化测试</span>
+                        <span class="skill-tag ant-tag">Selenium/Appium</span>
+                        <span class="skill-tag ant-tag">Vue/React开发</span>
+                        <span class="skill-tag ant-tag">Django全栈开发</span>
+                        <span class="skill-tag ant-tag">Docker容器化</span>
+                        <span class="skill-tag ant-tag">性能测试优化</span>
+                        <span class="skill-tag ant-tag">RESTful API开发</span>
+                        <span class="skill-tag ant-tag">MySQL数据库</span>
+                        <span class="skill-tag ant-tag">Pytest测试框架</span>
+                        <span class="skill-tag ant-tag">UIAutomator2</span>
+                        <span class="skill-tag ant-tag">Git版本控制</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 工作经历 -->
+        <div class="ant-card">
+            <div class="ant-card-body">
+                <h2 class="ant-typography" style="color: var(--primary-color)">💼 工作经历</h2>
+                <div class="ant-timeline">
+                    <!-- 微创经历 -->
+                    <div class="ant-timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="ant-timeline-item-content">
+                            <h3>上海微创软件（外派微软）</h3>
+                            <div class="ant-row">
+                                <div class="ant-col ant-col-12">
+                                    <p class="ant-typography-secondary">测试开发工程师</p>
+                                </div>
+                                <div class="ant-col ant-col-12" style="text-align: right">
+                                    <span class="ant-tag">2022.06 - 2025.02</span>
+                                </div>
+                            </div>
+                            <ul class="ant-typography" style="padding-left: 20px">
+                                <li>主导微软项目自动化测试框架设计与实施</li>
+                                <li>开发Python+Selenium测试脚本，效率提升40%</li>
+                                <li>关键模块性能优化，响应时间降低30%</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 腾讯经历 -->
+                    <div class="ant-timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="ant-timeline-item-content">
+                            <h3>诚迈科技（外派腾讯）</h3>
+                            <div class="ant-row">
+                                <div class="ant-col ant-col-12">
+                                    <p class="ant-typography-secondary">测试开发工程师</p>
+                                </div>
+                                <div class="ant-col ant-col-12" style="text-align: right">
+                                    <span class="ant-tag">2021.08 - 2022.05</span>
+                                </div>
+                            </div>
+                            <ul class="ant-typography" style="padding-left: 20px">
+                                <li>腾讯爱趣听APP自动化测试框架搭建</li>
+                                <li>UIAutomator2实现80%核心用例自动化</li>
+                                <li>实车测试覆盖10+主流车型</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 阿里经历 -->
+                    <div class="ant-timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="ant-timeline-item-content">
+                            <h3>北京汉克时代（外派阿里）</h3>
+                            <div class="ant-row">
+                                <div class="ant-col ant-col-12">
+                                    <p class="ant-typography-secondary">测试开发工程师</p>
+                                </div>
+                                <div class="ant-col ant-col-12" style="text-align: right">
+                                    <span class="ant-tag">2019.06 - 2021.08</span>
+                                </div>
+                            </div>
+                            <ul class="ant-typography" style="padding-left: 20px">
+                                <li>负责阿里相关项目的测试开发工作</li>
+                                <li>使用Python + Pytest + Requests进行接口自动化测试</li>
+                                <li>参与性能测试，分析系统性能瓶颈，提出优化建议</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 中软经历 -->
+                    <div class="ant-timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="ant-timeline-item-content">
+                            <h3>北京中软卓越</h3>
+                            <div class="ant-row">
+                                <div class="ant-col ant-col-12">
+                                    <p class="ant-typography-secondary">软件测试工程师</p>
+                                </div>
+                                <div class="ant-col ant-col-12" style="text-align: right">
+                                    <span class="ant-tag">2017.08 - 2019.04</span>
+                                </div>
+                            </div>
+                            <ul class="ant-typography" style="padding-left: 20px">
+                                <li>负责公司项目的功能测试、性能测试和兼容性测试</li>
+                                <li>编写测试用例，执行测试并跟踪Bug，确保产品质量</li>
+                                <li>使用Charles进行抓包分析，定位问题并协助开发人员修复</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 项目经验 -->
+        <div class="ant-card">
+            <div class="ant-card-body">
+                <h2 class="ant-typography" style="color: var(--primary-color)">🌟 项目成果</h2>
+                <div class="ant-row gutter-16">
+                    <!-- 支付平台项目 -->
+                    <div class="ant-col ant-col-12">
+                        <div class="ant-card" style="height: 100%">
+                            <div class="ant-card-body">
+                                <h3>支付验证平台</h3>
+                                <p class="ant-typography-secondary">全栈开发</p>
+                                <div class="ant-tag ant-tag-blue">Vue</div>
+                                <div class="ant-tag ant-tag-geekblue">Django</div>
+                                <div class="ant-tag ant-tag-purple">MySQL</div>
+                                <p class="ant-typography">实现数据自动化采集验证，效率提升300%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CRM系统 -->
+                    <div class="ant-col ant-col-12">
+                        <div class="ant-card" style="height: 100%">
+                            <div class="ant-card-body">
+                                <h3>CRM管理系统</h3>
+                                <p class="ant-typography-secondary">独立开发</p>
+                                <div class="ant-tag ant-tag-blue">Django</div>
+                                <div class="ant-tag ant-tag-geekblue">RESTful</div>
+                                <div class="ant-tag ant-tag-purple">Git</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 腾讯爱趣听 -->
+                    <div class="ant-col ant-col-12">
+                        <div class="ant-card" style="height: 100%">
+                            <div class="ant-card-body">
+                                <h3>腾讯爱趣听车载版APP</h3>
+                                <p class="ant-typography-secondary">测试开发</p>
+                                <div class="ant-tag ant-tag-blue">UIAutomator2</div>
+                                <div class="ant-tag ant-tag-geekblue">Python</div>
+                                <div class="ant-tag ant-tag-purple">性能测试</div>
+                                <p class="ant-typography">实现80%核心用例自动化，覆盖10+主流车型</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 全民K歌车载版 -->
+                    <div class="ant-col ant-col-12">
+                        <div class="ant-card" style="height: 100%">
+                            <div class="ant-card-body">
+                                <h3>全民K歌车载版APP</h3>
+                                <p class="ant-typography-secondary">测试开发</p>
+                                <div class="ant-tag ant-tag-blue">自动化测试</div>
+                                <div class="ant-tag ant-tag-geekblue">性能测试</div>
+                                <div class="ant-tag ant-tag-purple">实车测试</div>
+                                <p class="ant-typography">确保应用的稳定性和用户体验</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 高德地图APP -->
+                    <div class="ant-col ant-col-12">
+                        <div class="ant-card" style="height: 100%">
+                            <div class="ant-card-body">
+                                <h3>高德地图APP</h3>
+                                <p class="ant-typography-secondary">测试开发</p>
+                                <div class="ant-tag ant-tag-blue">功能测试</div>
+                                <div class="ant-tag ant-tag-geekblue">兼容性测试</div>
+                                <div class="ant-tag ant-tag-purple">性能测试</div>
+                                <p class="ant-typography">负责商家入驻模块的测试，确保模块的稳定性和用户体验</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nice潮牌APP -->
+                    <div class="ant-col ant-col-12">
+                        <div class="ant-card" style="height: 100%">
+                            <div class="ant-card-body">
+                                <h3>Nice潮牌APP</h3>
+                                <p class="ant-typography-secondary">测试开发</p>
+                                <div class="ant-tag ant-tag-blue">功能测试</div>
+                                <div class="ant-tag ant-tag-geekblue">兼容性测试</div>
+                                <div class="ant-tag ant-tag-purple">性能测试</div>
+                                <p class="ant-typography">负责搜索、购物车、个人中心模块的测试，确保模块的稳定性和用户体验</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 教育背景 -->
+        <div class="ant-card">
+            <div class="ant-card-body">
+                <h2 class="ant-typography" style="color: var(--primary-color)">🎓 教育背景</h2>
+                <div class="ant-row">
+                    <div class="ant-col ant-col-24">
+                        <h3>成都文理学院</h3>
+                        <p class="ant-typography">计算机科学与技术 | 本科</p>
+                        <p class="ant-typography-secondary">2013.09 - 2017.07</p>
+                        <div class="ant-tag">学生会创业就业部副部长</div>
+                        <div class="ant-tag">优秀毕业生</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 自我评价 -->
+        <div class="ant-card">
+            <div class="ant-card-body">
+                <h2 class="ant-typography" style="color: var(--primary-color)">📝 自我评价</h2>
+                <div class="ant-row">
+                    <div class="ant-col ant-col-24">
+                        <ul class="ant-typography" style="padding-left: 20px">
+                            <li>做事认真负责，具备较强的抗压能力，能够在高强度工作环境下保持高效。</li>
+                            <li>学习能力强，敢于尝试新技术，善于在工作中不断学习和提升自己。</li>
+                            <li>性格乐观开朗，具备良好的沟通能力和团队合作精神，能够快速融入团队并积极贡献。</li>
+                            <li>具备较强的适应能力，能够快速适应新环境和新挑战，积极面对问题并勇于克服。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 引入Ant Design JS -->
+    <script src="https://cdn.jsdelivr.net/npm/antd@4.24.13/dist/antd.min.js"></script>
+    <!-- 动画增强 -->
+    <script>
+        // 滚动动画触发
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        });
+
+        document.querySelectorAll('.ant-card').forEach((card) => {
+            card.style.opacity = 0;
+            card.style.transform = "translateY(20px)";
+            card.style.transition = "all 0.6s ease-out";
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>
